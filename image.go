@@ -29,7 +29,7 @@ type Pixel struct {
 
 //write an image to disk at a given path
 func saveToPNG(img image.Image, path string) (err error) {
-	out, err := os.Create(*file)
+	out, err := os.Create(path)
 	if err != nil {
 		return
 	}

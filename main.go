@@ -19,7 +19,7 @@ var (
 )
 
 var (
-	file        *string
+	path        *string
 	center_x    *float64
 	center_y    *float64
 	zoom        *float64
@@ -71,7 +71,7 @@ func main() {
 		Palette{BLUE, WHITE, ORANGE, WHITE, PURPLE},
 	})
 
-	if err := saveToPNG(img, path); err != nil {
+	if err := saveToPNG(img, *path); err != nil {
 		panic(err)
 	}
 
